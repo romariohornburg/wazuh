@@ -1,0 +1,22 @@
+<!--
+  -  SocAlly default ruleset
+  -  Created by SocAlly.
+  -  Copyright (C) 2024, SocAlly.
+  -  This program is a free software; you can redistribute it and/or modify it under the terms of GPLv2.
+-->
+
+<group name="socally,">
+
+  <rule id="99900" level="3">
+    <decoded_as>socally-creds-decoder</decoded_as>
+    <field name="id">\w+</field>
+    <description>SocAlly Creds Rule</description>
+  </rule>
+
+  <rule id="99901" level="3">
+    <decoded_as>socally-tokens-decoder</decoded_as>
+    <field name="id">\w+</field>
+    <description>SocAlly Tokens Rule</description>
+  </rule>
+  
+</group>

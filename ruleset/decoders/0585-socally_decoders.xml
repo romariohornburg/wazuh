@@ -1,0 +1,27 @@
+<!--
+  -  SocAlly decoders
+  -  Created by SocAlly.
+  -  Copyright (C) 2024, Socally.
+  -  This program is a free software; you can redistribute it and/or modify it under the terms of GPLv2.
+-->
+
+<decoder name="socally-creds-decoder">
+  <prematch>^{"id":"\w+","domain":"\S+","user":"\S+","password":"\S+","loginType":"\S+","appType":"\S+","fullUrl":"\S+","validation":"\S+","timestamp":"\S+"}$</prematch>
+</decoder>
+
+<decoder name="socally-creds-decoder-fields">
+  <parent>socally-creds-decoder</parent>
+  <regex offset="after_prematch">^{"id":"(\w+)","domain":"(\S+)","user":"(\S+)","password":"(\S+)","loginType":"(\S+)","appType":"(\S+)","fullUrl":"(\S+)","validation":"(\S+)","timestamp":"(\S+)"}</regex>
+  <order>id, domain, user, password, loginType, appType, fullUrl, validation, timestamp</order>
+</decoder>
+
+
+<decoder name="socally-tokens-decoder">
+  <prematch>^{"id":"\w+","token":"\S+","url":"\S+","timestamp":"\S+","alertDate":"\S+","processedAt":"\S+","ownerEmail":"\S+","leakDate":"\S+"}$</prematch>
+</decoder>
+
+<decoder name="socally-tokens-decoder-fields">
+  <parent>socally-tokens-decoder</parent>
+  <regex offset="after_prematch">^{"id":"(\w+)","token":"(\S+)","url":"(\S+)","timestamp":"(\S+)","alertDate":"(\S+)","processedAt":"(\S+)","ownerEmail":"(\S+)","leakDate":"(\S+)"}</regex>
+  <order>id, token, url, timestamp, alertDate, processedAt, ownerEmail, leakDate</order>
+</decoder>
