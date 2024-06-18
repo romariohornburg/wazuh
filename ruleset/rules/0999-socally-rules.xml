@@ -6,17 +6,10 @@
 -->
 
 <group name="socally,">
-
+  
   <rule id="99900" level="3">
-    <decoded_as>socally-creds-decoder</decoded_as>
-    <field name="id">\w+</field>
-    <description>SocAlly Creds Rule</description>
-  </rule>
-
-  <rule id="99901" level="3">
-    <decoded_as>socally-tokens-decoder</decoded_as>
-    <field name="id">\w+</field>
-    <description>SocAlly Tokens Rule</description>
+       <decoded_as>socally</decoded_as>
+       <description>SocAlly Credential Found!</description>
   </rule>
   
 </group>
