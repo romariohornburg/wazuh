@@ -18,7 +18,7 @@
       <field name="validation">^pending$</field>
       <description>Socally: Credential from User $(user) found.</description>
       <mitre>
-          <id>T1580,T1003</id>
+          <id>T1087</id>
       </mitre>
   </rule>
   <rule id="99902" level="12">
@@ -26,7 +26,8 @@
     <field name="validation">^valid$</field>
     <description>Socally: Valid Credential from User $(user) found.</description>
     <mitre>
-        <id>T1580,T1003,T1078</id>
+        <id>T1087</id>
+        <id>T1586</id>
     </mitre>
   </rule>
   <rule id="99903" level="3">
@@ -34,7 +35,7 @@
     <field name="validation">^invalid$</field>
     <description>Socally: Invalid Credential from User $(user) found.</description>
     <mitre>
-        <id>T1580,T1003</id>
+        <id>T1087</id>
     </mitre>
   </rule>
 </group>
